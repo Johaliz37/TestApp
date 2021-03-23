@@ -1,0 +1,45 @@
+﻿@page
+@model Agreement.Web.Pages.Agreements.IndexModel
+@{
+}
+
+@*@page
+@model List<Agreement.Logic.Models.dtoAgreement>
+
+@{ ViewData["Title"] = "Agreements"; }*@
+
+
+<h2>Agreements</h2>
+
+<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.dtoAgremment[0].Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dtoAgremment[0].Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dtoAgremment[0].Amount)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.dtoAgremment)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
