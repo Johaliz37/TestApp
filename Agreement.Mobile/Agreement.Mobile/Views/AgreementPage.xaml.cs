@@ -14,8 +14,7 @@ namespace Agreement.Mobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AgreementPage : ContentPage
     {
-        private const string Url = "https://192.168.1.4:44395/api/Get";
-        //private const string Url = "https://jsonplaceholder.typicode.com/posts";
+        private const string Url = "https://192.168.1.4:44395/api/Get"; //TODO: Inidicar la IP Local.
         private readonly HttpClient _client = new HttpClient();
         private ObservableCollection<ViewModels.Agreement> _agreements;
 
